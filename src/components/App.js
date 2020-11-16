@@ -39,7 +39,7 @@ class App extends Component {
 
   //bind ArrowRight keydown event
   componentDidMount() {
-    document.addEventListener("keydown", this.onKeyPressFn, false);
+    document.addEventListener("keydown", this.onKeyPressFn.bind(this), false);
   }
 
   render() {
