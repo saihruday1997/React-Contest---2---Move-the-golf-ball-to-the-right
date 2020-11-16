@@ -11,6 +11,7 @@ class App extends Component {
     };
     this.renderChoice = this.renderChoice.bind(this);
     this.buttonClickHandler = this.buttonClickHandler.bind(this);
+    this.onKeyPressFn = this.onKeyPressFn.bind(this);
   }
 
   onKeyPressFn(e) {
@@ -39,7 +40,7 @@ class App extends Component {
 
   //bind ArrowRight keydown event
   componentDidMount() {
-    document.addEventListener("keydown", this.onKeyPressFn.bind(this), false);
+    document.addEventListener("keydown", this.onKeyPressFn, false);
   }
 
   render() {
