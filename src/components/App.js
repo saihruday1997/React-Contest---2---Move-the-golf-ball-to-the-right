@@ -19,9 +19,11 @@ class App extends Component {
     //console.log(e.key);
     if (e.key === "ArrowRight") {
       //console.log("inside IF");
-      this.setState({ posi: this.state.posi + 5 });
+      this.setState({ posi: this.state.posi + 5 }, () =>
+        this.setState({ ballPosition: { left: `${this.state.posi}px` } })
+      );
       //console.log(this.state.posi);
-      this.setState({ ballPosition: { left: `${this.state.posi}px` } });
+      //this.setState({ ballPosition: { left: `${this.state.posi}px` } });
     }
   }
 
